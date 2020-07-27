@@ -19,7 +19,7 @@
 
   if ($update) {
     // se avvenuto correttamente l'update torno alla pagina principale e avviso
-    header('Location:'.$basePath);
+    header('Location:'.$basePath.'?stanzamodificata='.$room_number);
   } else {
     die("query error");
   }

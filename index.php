@@ -3,11 +3,12 @@
 <?php include __DIR__ . '/partials/header.php'; ?>
 <?php include __DIR__ . '/server.php'; ?>
 
-
      <main>
-      <?php if ($update){ ?>
-      <p>Update avvenuto con successo.</p>
-      <?php } ?>
+      <?php $stanza_modificata = $_GET['stanzamodificata']; ?>
+        <?php if ($stanza_modificata) { ?>
+          <p>Update della stanza numero: <?php echo $stanza_modificata ?> avvenuto con successo</p>
+        <?php } ?>
+
        <!-- Inizio tabella lista stanze -->
        <table class="room">
         <thead>
