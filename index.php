@@ -3,7 +3,11 @@
 <?php include __DIR__ . '/partials/header.php'; ?>
 <?php include __DIR__ . '/server.php'; ?>
 
+
      <main>
+      <?php if ($update){ ?>
+      <p>Update avvenuto con successo.</p>
+      <?php } ?>
        <!-- Inizio tabella lista stanze -->
        <table class="room">
         <thead>
@@ -22,6 +26,9 @@
             <td><?php echo $room['floor']; ?></td>
             <td>
               <a href="<?php echo $basePath; ?>/show/show.php/?id=<?php echo $room['id']; ?>">Show info</a>
+            </td>
+            <td>
+              <a href="<?php echo $basePath; ?>/update/edit.php/?id=<?php echo $room['id']; ?>">Update</a>
             </td>
           </tr>
           <!-- Fine singola stanza -->
