@@ -1,6 +1,7 @@
 <?php include __DIR__ . '/env.php'; ?>
 <?php include __DIR__ . '/database.php'; ?>
 <?php include __DIR__ . '/partials/header.php'; ?>
+<?php include __DIR__ . '/server.php'; ?>
 
      <main>
        <!-- Inizio tabella lista stanze -->
@@ -19,6 +20,9 @@
             <td><?php echo $room['id']; ?></td>
             <td><?php echo $room['room_number']; ?></td>
             <td><?php echo $room['floor']; ?></td>
+            <td>
+              <a href="<?php echo $basePath; ?>/show/show.php/?id=<?php echo $room['id']; ?>">Show info</a>
+            </td>
           </tr>
           <!-- Fine singola stanza -->
           <?php  } ?>
