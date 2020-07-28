@@ -9,7 +9,7 @@
   $result = $conn->query($sql);
 
   if (!$result) {
-    die('eliminazione non avvenuta');
+    die('Eliminazione non avvenuta per un problema tecnico.');
     }
   $conn->close();
  ?>

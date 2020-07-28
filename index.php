@@ -8,7 +8,7 @@
         <?php if ($stanza_modificata) { ?>
           <p>Update della stanza numero: <?php echo $stanza_modificata ?> avvenuto con successo</p>
         <?php } ?>
-        
+
        <!-- Inizio tabella lista stanze -->
        <table class="room">
         <thead>
@@ -43,6 +43,11 @@
         </tbody>
        </table>
        <!-- Fine tabella lista stanze -->
+
+      <div class="">
+        <a href="<?php echo $basePath; ?>/insert/insert.php/?id=<?php echo $room['id']; ?>">Inserisci una nuova stanza</a>
+      </div>
+
      </main>
 
    </body>
