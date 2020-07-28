@@ -12,6 +12,7 @@
       <li>Piano: <?php echo $room['floor']; ?></li>
       <li>Numero letti: <?php echo $room['beds']; ?></li>
       <li>Creata il: <?php echo $room['created_at']; ?></li>
+      <li>Aggiornata il: <?php echo $room['updated_at']; ?></li>
     </ul>
   <?php } else { ?>
   <p>La stanza non esiste.</p>

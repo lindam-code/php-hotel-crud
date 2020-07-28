@@ -10,7 +10,8 @@
   $sql = "UPDATE `stanze`
           SET `room_number` = $room_number,
               `floor` = $floor,
-              `beds` = $beds
+              `beds` = $beds,
+              `updated_at` = NOW()
 
           WHERE `id` = $room_id
         ";

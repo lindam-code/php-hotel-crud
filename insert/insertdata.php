@@ -6,15 +6,15 @@
   $floor = $_POST['floor'];
   $beds = $_POST['beds'];
 
-  $sql = "INSERT INTO `stanze` (`room_number`,`floor`,`beds`)
-          VALUES ($room_number,$floor,$beds) ";
+  $sql = "INSERT INTO `stanze` (`room_number`,`floor`,`beds`,`created_at`)
+          VALUES ($room_number,$floor,$beds,NOW()) ";
 
   $result = $conn->query($sql);
 
   if (!$result) {
     // se nn avviene la query mostro il messaggio
     die("Inserimento non avvenuto per un problema tecnnico.");
-  } 
+  }
   $conn->close();
  ?>
  <!-- se avviene l'inserimento mostro messaggio -->
