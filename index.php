@@ -8,7 +8,7 @@
         <?php if ($stanza_modificata) { ?>
           <p>Update della stanza numero: <?php echo $stanza_modificata ?> avvenuto con successo</p>
         <?php } ?>
-
+        
        <!-- Inizio tabella lista stanze -->
        <table class="room">
         <thead>
@@ -30,6 +30,12 @@
             </td>
             <td>
               <a href="<?php echo $basePath; ?>/update/edit.php/?id=<?php echo $room['id']; ?>">Update</a>
+            </td>
+            <td>
+              <form action="<?php echo $basePath . 'delete/delete.php'?>" method="post">
+                <input type="hidden" name="formid" value="<?php echo $room['id']; ?>">
+                <input type="submit" value="delete">
+              </form>
             </td>
           </tr>
           <!-- Fine singola stanza -->
